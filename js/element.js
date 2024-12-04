@@ -4,14 +4,22 @@ export const ELEMENT_UI = {
   SEARCH_CITY: document.getElementById("searchCity"),
   TEMPETATURE: document.getElementById("temperature"),
   IMG: document.getElementById("img"),
+  FEELS_LIKE: document.getElementById('feelsLike__temperature'),
   FAVOURITES_CITY: document.getElementById("favouritesCity"),
   ARRAY_FAVOURITES_CITY: document.querySelectorAll('#favouritesCity'),
-  FAVOURITES_BTN: document.getElementById("favouritesBtn")
+  FAVOURITES_BTN: document.getElementById("favouritesBtn"),
+  SUNSET: document.getElementById('sunset'),
+  SUNRISE: document.getElementById('sunrise'),
+  SCHEDULES:document.querySelectorAll('.degree-indicator__temperature-schedule'),
+  SCHEDULE_TEMP:document.querySelectorAll('.schedule-temperature'),
+  SCHEDULE_FEELS_LIKE:document.querySelectorAll('.schedule-feels-like'),
+  SCHEDULE_ICON:document.querySelectorAll('.schedule__icon'),
+  SCHEDULE_TIMES:document.querySelectorAll('.temperature-schedule-time'),
 };
 
 export const ELEMENT_URL = {
   API_KEY: "e11980e221fe6c46d4a61d25c357da65",
-  SERVER_URL: "https://api.openweathermap.org/data/2.5/weather",
+  SERVER_URL: "https://api.openweathermap.org/data/2.5/",
 };
 
 export const WEATHER_FAVOURITES = [];
