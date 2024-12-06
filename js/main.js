@@ -6,7 +6,6 @@ import {
 } from "./element.js";
 import { cityNameError, errorIsSameNameCities } from "./error.js";
 
-<<<<<<< HEAD
 function callAllFunctions() {
   saveСurrentCity();
   saveFavoriteCitiese();
@@ -15,8 +14,6 @@ function callAllFunctions() {
   useFavouriteCities();
 }
 
-=======
->>>>>>> f6416292ccdfce2d42e024371fd347cfc5b3406e
 function fetchCity(name, request) {
   const url = `${ELEMENT_URL.SERVER_URL}${request}?q=${name}&units=metric&appid=${ELEMENT_URL.API_KEY}&lang=ru`;
   return fetch(url).then((response) => {
@@ -28,7 +25,6 @@ function fetchCity(name, request) {
   });
 }
 
-<<<<<<< HEAD
 function showTime(data, elementUi) {
   const date = new Date(data * 1000);
   const hours =
@@ -44,33 +40,17 @@ function showTime(data, elementUi) {
 
 function showWeatherOfCity(name = ELEMENT_UI.SEARCH_CITY.value) {
   fetchCity(name, "weather")
-=======
-function showTime(data, elementUi){
-  const date = new Date(data * 1000);
-  const hours = String(date.getHours()).length === 1 ? "0" + date.getHours(): date.getHours() ;
-  const minutes = String(date.getMinutes()).length === 1 ? "0" + date.getMinutes():  date.getMinutes() ;
-  return elementUi.textContent = hours + ':' + minutes
-}
-
-function showWeatherOfCity(name = ELEMENT_UI.SEARCH_CITY.value) {
-  fetchCity(name, 'weather')
->>>>>>> f6416292ccdfce2d42e024371fd347cfc5b3406e
     .then((data) => {
       ELEMENT_UI.SHOW_CITY.textContent = data.name;
       ELEMENT_UI.TEMPETATURE.textContent = Math.round(data.main.temp);
       ELEMENT_UI.IMG.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-<<<<<<< HEAD
       ELEMENT_UI.FEELS_LIKE.textContent = Math.round(data.main.feels_like);
-=======
-      ELEMENT_UI.FEELS_LIKE.textContent = Math.round(data.main.feels_like) ;
->>>>>>> f6416292ccdfce2d42e024371fd347cfc5b3406e
       showTime(data.sys.sunrise, ELEMENT_UI.SUNRISE);
       showTime(data.sys.sunset, ELEMENT_UI.SUNSET);
     })
     .catch((error) => alert(error));
 }
 
-<<<<<<< HEAD
 function showScheduleOfCity(name = ELEMENT_UI.SEARCH_CITY.value) {
   fetchCity(name, "forecast").then((data) => {
     ELEMENT_UI.SCHEDULES.forEach((item, index) => {
@@ -87,20 +67,6 @@ function showScheduleOfCity(name = ELEMENT_UI.SEARCH_CITY.value) {
     });
   });
 }
-=======
-function showScheduleOfCity(name = ELEMENT_UI.SEARCH_CITY.value){
-  fetchCity(name, 'forecast')
-  .then((data) => {
-    for(let i = 0; i < ELEMENT_UI.SCHEDULES.length; i++){
-      showTime(data.list[i].dt, ELEMENT_UI.SCHEDULE_TIMES[i])
-      ELEMENT_UI.SCHEDULE_TEMP[i].textContent = Math.round(data.list[i].main.temp) 
-      ELEMENT_UI.SCHEDULE_FEELS_LIKE[i].textContent = Math.round(data.list[i].main.feels_like) 
-      ELEMENT_UI.SCHEDULE_ICON[i].src =`https://openweathermap.org/img/wn/${data.list[i].weather[0].icon}@2x.png` 
-    }
-  })
-}
-
->>>>>>> f6416292ccdfce2d42e024371fd347cfc5b3406e
 
 function addFavouriteCities() {
   try {
@@ -179,11 +145,6 @@ ELEMENT_UI.FORM.addEventListener("submit", (e) => {
   e.preventDefault();
   showWeatherOfCity();
   showScheduleOfCity();
-<<<<<<< HEAD
-=======
-  deleteFavouriteCities();
-  useFavouriteCities();
->>>>>>> f6416292ccdfce2d42e024371fd347cfc5b3406e
   ELEMENT_UI.SEARCH_CITY.value = "";
 });
 
