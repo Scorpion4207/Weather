@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,15 +19,6 @@
       </form>
       <div class="weather__body">
         <div class="degree-indicator">
-          <div class="degree-indicator__degrees">
-            <span id="temperature"></span>
-            <div class="degree-indicator__degrees-img">
-              <img src="img/mask.svg" alt="Знак градуса">
-            </div>
-          </div>
-          <div class="degree-indicator__img">
-            <img id="img" loading="lazy" width="180" height="180" src="" alt="Иконка погоды">
-          </div>
           <div class="degree-indicator__show-city">
             <div class="degree-indicator__city" id="showCity"></div>
             <button class="degree-indicator__btn" id="favouritesBtn">
@@ -36,6 +27,59 @@
                 </svg>
             </button>
           </div>
+          <div class="degree-indicator__degrees">
+            <span id="temperature"></span>
+            <div class="degree-indicator__degrees-img">
+              <img id="img" loading="lazy" width="70" height="70" src="" alt="Иконка погоды">
+            </div>
+          </div>
+          <ul class="degree-indicator__list">
+            <li class="degree-indicator__item">
+              <p>Ощущается как: <span id="feelsLike__temperature"></span></p>
+            </li>
+            <li class="degree-indicator__item">
+              <p>Восход: <span id="sunrise"></span></p>
+            </li>
+            <li class="degree-indicator__item">
+              <p>Закат: <span id="sunset"></span></p>
+            </li>
+          </ul>
+          <ul class="degree-indicator__temperature-schedule">
+            <li class="temperature-schedule-time"></li>
+            <li class="temperature-schedule-body">
+              <div class="temperature-schedule-body-left">
+                <p>Температура: <span class="schedule-temperature"></span></p>
+                <p>Ощущается как: <span class="schedule-feels-like"></span></p>
+              </div>
+              <div class="temperature-schedule-body-icon">
+                <img class="schedule__icon" loading="lazy" width="35" height="35" src="" alt="Иконка погоды">
+              </div>
+            </li>
+          </ul>        
+          <ul class="degree-indicator__temperature-schedule">
+            <li class="temperature-schedule-time"></li>
+            <li class="temperature-schedule-body">
+              <div class="temperature-schedule-body-left">
+                <p>Температура: <span class="schedule-temperature"></span></p>
+                <p>Ощущается как: <span class="schedule-feels-like"></span></p>
+              </div>
+              <div class="temperature-schedule-body-icon">
+                <img class="schedule__icon" loading="lazy" width="35" height="35" src="" alt="Иконка погоды">
+              </div>
+            </li>
+          </ul>        
+          <ul class="degree-indicator__temperature-schedule">
+            <li class="temperature-schedule-time"></li>
+            <li class="temperature-schedule-body">
+              <div class="temperature-schedule-body-left">
+                <p>Температура: <span class="schedule-temperature"></span></p>
+                <p>Ощущается как: <span class="schedule-feels-like"></span></p>
+              </div>
+              <div class="temperature-schedule-body-icon">
+                <img class="schedule__icon" loading="lazy" width="35" height="35" src="" alt="Иконка погоды">
+              </div>
+            </li>
+          </ul>        
         </div>
         <div class="favourites">
           <div class="favourites__title">
@@ -43,7 +87,6 @@
           </div>
           <div class="favourites__city">
             <ul class="favourites__city-list" id="favouritesCity">
-
             </ul>
           </div>
         </div>

@@ -66,10 +66,7 @@ button {
 
 .degree-indicator__degrees {
   display: flex;
-}
-
-.degree-indicator__degrees-img {
-  margin-top: 9px;
+  margin-bottom: 16px;
 }
 
 .degree-indicator__img{
@@ -86,6 +83,38 @@ button {
 
 .degree-indicator__btn {
   display: flex;
+}
+
+.degree-indicator__list{
+  margin-bottom: 25px;
+}
+
+.temperature-schedule-time{
+  margin-bottom: 20px;
+}
+
+.temperature-schedule-body-left p:last-child{
+  margin-top: 10px;
+}
+
+.degree-indicator__item:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.degree-indicator__temperature-schedule{
+  font-size: 18px;
+  padding: 8px 10px 16px;
+  border-bottom: 1px solid black;
+}
+.degree-indicator__temperature-schedule:last-child{
+  padding: 8px 10px 0px;
+  border-bottom: 0px solid black;
+}
+
+.temperature-schedule-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .favourites__title {
@@ -152,6 +181,11 @@ button {
   opacity: .6;
 }
 
+@media (max-width: 600px) {
+  .weather__body{
+    flex-direction: column;
+  }
+}
 @media (max-width: 600px) {
   .weather__body{
     flex-direction: column;
