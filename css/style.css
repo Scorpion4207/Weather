@@ -1,0 +1,193 @@
+@import "reset.css";
+@import "fonts.css";
+
+button {
+  background-color: transparent;
+}
+
+.body {
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-size: 24px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+.weather {
+  max-width: 600px;
+  width: 100%;
+}
+
+.weather__form {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  padding: 7px 17px;
+  border: 1px solid #000;
+  border-bottom: none;
+}
+
+.form__search-city {
+  width: 100%;
+}
+
+.degree-indicator__btn path,
+.form__btn path {
+  transition: 0.4s;
+}
+
+.degree-indicator__btn:hover path,
+.form__btn:hover path {
+  opacity: 0.8;
+}
+
+.weather__body {
+  display: flex;
+  justify-content: space-between;
+ 
+}
+.degree-indicator {
+  border: 1px solid #000;
+  border-right: none;
+  padding: 20px 23px;
+  width: 100%;
+}
+.favourites {
+  border: 1px solid #000;
+  width: 100%;
+}
+
+.degree-indicator__degrees span {
+  font-size: 70px;
+}
+
+.degree-indicator__degrees {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+.degree-indicator__img{
+  display: flex;
+  justify-content: center;
+}
+
+.degree-indicator__show-city{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+}
+
+.degree-indicator__btn {
+  display: flex;
+}
+
+.degree-indicator__list{
+  margin-bottom: 25px;
+}
+
+.temperature-schedule-time{
+  margin-bottom: 20px;
+}
+
+.temperature-schedule-body-left p:last-child{
+  margin-top: 10px;
+}
+
+.degree-indicator__item:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.degree-indicator__temperature-schedule{
+  font-size: 18px;
+  padding: 8px 10px 16px;
+  border-bottom: 1px solid black;
+}
+.degree-indicator__temperature-schedule:last-child{
+  padding: 8px 10px 0px;
+  border-bottom: 0px solid black;
+}
+
+.temperature-schedule-body{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.favourites__title {
+  padding: 17px 18px;
+  border-bottom: 1px solid #000;;
+}
+
+.favourites__city{
+  padding: 20px 18px 17px ;
+}
+
+.favourites__city-list{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-height: 215px;
+}
+.favourites__city-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.favourites__city-btnClouse {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  margin-left: 12px;
+}
+
+.favourites__city-btnClouse::before,
+.favourites__city-btnClouse::after {
+  content: "";
+  position: absolute;
+  border: 1px solid #000;
+  opacity: 0.5;
+  width: 20px;
+  height: 0px;
+  transition: all .3s;
+}
+
+.favourites__city-btnClouse::before {
+  transform: rotate(-45deg);
+}
+.favourites__city-btnClouse::after {
+  transform: rotate(45deg);
+}
+
+.favourites__city-btnClouse:hover::before,
+.favourites__city-btnClouse:hover::after {
+  opacity: .8;
+}
+
+.favourites__city-name{
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.favourites__city-name:hover{
+  opacity: .6;
+}
+
+@media (max-width: 600px) {
+  .weather__body{
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .weather__body{
+    flex-direction: column;
+  }
+}
